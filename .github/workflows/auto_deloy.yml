@@ -30,10 +30,9 @@ jobs:
      
 
     # Runs a set of commands using the runners shell
-    - name: installing using surge
-     run: npm install --global surge
+    - name: Installing surge
+      run: npm install --global surge
     - name: deploying using surge
-      run: surge ./  sassy-desk.surge.sh  --Token $ {{secrets.SURGE_TOKEN }}
+      run: surge ./  sassy-desk.surge.sh  --token ${{secrets.SURGE_TOKEN }}
    
-        echo Add other actions to build,
-        echo test, and deploy your project.
+       
