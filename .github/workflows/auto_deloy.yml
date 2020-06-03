@@ -23,15 +23,15 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: installing Node
-     uses: actions/setup-node@v2-beta
+    -uses: actions/setup-node@v2-beta
     width:
-    node-version: 12
+     node-version: 12
        
      
 
     # Runs a set of commands using the runners shell
-    - name: installing surge
-      run: npm install --globle surge
+    - name: installing using surge
+     run: npm install --global surge
     - name: deploying using surge
       run: surge ./  sassy-desk.surge.sh  --Token $ {{secrets.SURGE_TOKEN }}
    
