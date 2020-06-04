@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Bootcamp2020
+name: Bootcamp 2020
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -24,8 +24,8 @@ jobs:
     # Runs a single command using the runners shell
     - name: installing Node
       uses: actions/setup-node@v2-beta
-    width:
-     node-version: 12
+      with:
+       node-version: 12
        
      
 
@@ -33,6 +33,6 @@ jobs:
     - name: Installing surge
       run: npm install --global surge
     - name: deploying using surge
-      run: surge ./  sassy-desk.surge.sh  --token ${{secrets.SURGE_TOKEN }}
+      run: surge ./  sassy-desk.surge.sh  --token ${{ secrets.SURGE_TOKEN }}
    
        
